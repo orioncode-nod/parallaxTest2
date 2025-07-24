@@ -27,6 +27,12 @@ Investigar y experimentar con:
 
 ---
 
+##  Vista previa
+
+[ver en Github Pages] (https://orioncode-nod.github.io/parallaxTest2/)
+
+---
+
 ## 📂 Estructura del proyecto
 ```
 parallax-experimento/
