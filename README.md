@@ -28,6 +28,7 @@ Investigar y experimentar con:
 ---
 
 ## 📂 Estructura del proyecto
+```
 parallax-experimento/
 ├── index.html
 ├── style.css
@@ -35,7 +36,7 @@ parallax-experimento/
   ├── fondo-1.jpg
   ├── fondo-2.jpg
   ├── fondo-3.jpg
-
+```
 ---
 
 ## 🧠 Conceptos explorados
