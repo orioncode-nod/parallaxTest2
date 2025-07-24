@@ -1,0 +1,82 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: sans-serif;
+  color: white;
+}
+main {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 1.5px;
+  scroll-behavior: smooth;
+}
+.layer {
+  position: relative;
+  /*height: 100vh;*/
+  transform-style: preserve-3d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  color: white;
+}
+.layer.parallax {
+  height: 150vh; /* o más */
+}
+
+.layer h1 {
+  font-size: 3rem;
+  z-index: 1;
+  transform: translateZ(0.5px) scale(0.75); /* movimiento leve hacia adelante */
+}
+
+.parallax {
+  height: 150vh;
+}
+/* Capas de fondo */
+.parallax::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  transform: translateZ(-1px) scale(2); /* profundidad fuerte */
+}
+
+/* Fondo 1 */
+.bg1::after {
+  background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('./img/3.jpg');
+}
+/* Fondo 2 */
+.bg2::after {
+  background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('./img/fondo-2.jpg');
+}
+/* Fondo 3 */
+.bg3::after {
+  background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('./img/fondo-3.jpg');
+}
+
+/* Secciones sin parallax */
+
+.inicio{
+  min-height: 120vh;
+  background-color: #111;
+}
+
+.no-parallax {
+  height: 100vh;
+  background: #111;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .layer h1 {
+    font-size: 2rem;
+  }
+}
+
